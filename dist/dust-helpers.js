@@ -1,7 +1,12 @@
+/*! dustjs-helpers - v1.6.0
+* https://github.com/linkedin/dustjs-helpers
+* Copyright (c) 2015 Aleksander Williams; Released under the MIT License */
 (function(root, factory) {
-
+  if (typeof exports === 'object') {
     module.exports = factory(require('dustjs-linkedin'));
-
+  } else {
+    factory(root.dust);
+  }
 }(this, function(dust) {
 
 // Use dust's built-in logging when available
